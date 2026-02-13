@@ -416,3 +416,27 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+
+
+# --- WEB (NodeJS) ---
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+build/
+dist/
+
+# ---  PYTHON  ---
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# --- SYSTEME (Mac & Windows) ---
+.DS_Store
+Thumbs.db
+
+# --- AUTRES ---
+.idea/
+*.log
