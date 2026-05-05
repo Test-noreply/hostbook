@@ -1,7 +1,0 @@
-[
-    {"id": 1, "nom": "TechCorp", "logo": "https://via.placeholder.com/150/0000FF/808080?text=TechCorp", "description": "Fournisseur de matériel informatique haute performance."},
-    {"id": 2, "nom": "CloudSolutions", "logo": "https://via.placeholder.com/150/FF0000/FFFFFF?text=CloudSol", "description": "Partenaire pour l'hébergement cloud et les serveurs dédiés."},
-    {"id": 3, "nom": "OfficeSupplies", "logo": "https://via.placeholder.com/150/00FF00/000000?text=Office", "description": "Fournitures de bureau et mobilier ergonomique pour les employés."},
-    {"id": 4, "nom": "NetSecurity", "logo": "https://via.placeholder.com/150/FFFF00/000000?text=NetSec", "description": "Audits de sécurité, solutions pare-feu et protection des données."},
-    {"id": 5, "nom": "DataAnalytics", "logo": "https://via.placeholder.com/150/FF00FF/FFFFFF?text=Data", "description": "Outils d'analyse de données et solutions d'intelligence artificielle."}
-]
