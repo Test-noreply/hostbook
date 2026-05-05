@@ -21,6 +21,6 @@ Equipes :
 - Git : Théodore
 - Intranet : Edward
 - Vitrine : Julien
-- Donnés : Clément
-- Comunication : Théodore
+- Données : Clément
+- Communication : Théodore
 - Webdesigner : Raphaël 
