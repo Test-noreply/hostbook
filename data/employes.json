@@ -1,0 +1,14 @@
+[
+    {"id": 1, "nom": "Dupont", "prenom": "Jean", "fonction": "Directeur Général", "photo": "https://randomuser.me/api/portraits/men/1.jpg", "bio": "Jean a fondé l'entreprise il y a 10 ans."},
+    {"id": 2, "nom": "Martin", "prenom": "Sophie", "fonction": "Directrice des Ressources Humaines", "photo": "https://randomuser.me/api/portraits/women/2.jpg", "bio": "Experte en relations humaines et gestion du personnel."},
+    {"id": 3, "nom": "Bernard", "prenom": "Luc", "fonction": "Directeur Technique", "photo": "https://randomuser.me/api/portraits/men/3.jpg", "bio": "Luc gère l'ensemble des infrastructures IT et encadre l'équipe technique."},
+    {"id": 4, "nom": "Dubois", "prenom": "Marie", "fonction": "Responsable Marketing", "photo": "https://randomuser.me/api/portraits/women/4.jpg", "bio": "Créative et toujours à l'affût des dernières tendances pour nos campagnes."},
+    {"id": 5, "nom": "Thomas", "prenom": "Paul", "fonction": "Développeur Senior", "photo": "https://randomuser.me/api/portraits/men/5.jpg", "bio": "Expert en PHP et architectures distribuées, lead dev sur nos projets majeurs."},
+    {"id": 6, "nom": "Robert", "prenom": "Julie", "fonction": "Designer UX/UI", "photo": "https://randomuser.me/api/portraits/women/6.jpg", "bio": "Julie s'assure que nos produits sont intuitifs et accessibles à tous."},
+    {"id": 7, "nom": "Richard", "prenom": "David", "fonction": "Administrateur Système", "photo": "https://randomuser.me/api/portraits/men/7.jpg", "bio": "Garant de la stabilité de nos serveurs et de la sécurité réseau."},
+    {"id": 8, "nom": "Petit", "prenom": "Emma", "fonction": "Développeuse Front-End", "photo": "https://randomuser.me/api/portraits/women/8.jpg", "bio": "Spécialiste de Vue.js et React, créatrice d'interfaces dynamiques."},
+    {"id": 9, "nom": "Durand", "prenom": "Nicolas", "fonction": "Commercial", "photo": "https://randomuser.me/api/portraits/men/9.jpg", "bio": "Nicolas est le premier contact de nos clients et gère le portefeuille grand compte."},
+    {"id": 10, "nom": "Leroy", "prenom": "Alice", "fonction": "Comptable", "photo": "https://randomuser.me/api/portraits/women/10.jpg", "bio": "Gère les finances d'une main de maître et veille à l'équilibre budgétaire."},
+    {"id": 11, "nom": "Moreau", "prenom": "Antoine", "fonction": "Développeur Back-End", "photo": "https://randomuser.me/api/portraits/men/11.jpg", "bio": "Passionné par les bases de données optimisées et le code propre."},
+    {"id": 12, "nom": "Simon", "prenom": "Clara", "fonction": "Chef de Projet", "photo": "https://randomuser.me/api/portraits/women/12.jpg", "bio": "Fait le lien entre les équipes techniques et les clients pour assurer la livraison."}
+]

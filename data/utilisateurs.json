@@ -1,0 +1,32 @@
+[
+    {
+        "utilisateur": "admin",
+        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "email": "admin@admin.com",
+        "groupe": "admin"
+    },
+    {
+        "utilisateur": "user",
+        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "email": "user@user.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "modo",
+        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "email": "modo@modo.com",
+        "groupe": "managers"
+    },
+    {
+        "utilisateur": "anonymous",
+        "motdepasse": "$2y$10$KjUbubNiOZMWhx4pCTE39.Y3X6aveHLCCqBEohBZ71D.r2YY5mrGy",
+        "email": "",
+        "groupe": "direction"
+    },
+    {
+        "utilisateur": "aucaijoir",
+        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "email": "aucaijoir@aucaijoir.com",
+        "groupe": "moderateur"
+    }
+]
