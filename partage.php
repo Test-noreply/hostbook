@@ -24,11 +24,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $extension = strtolower(pathinfo($fichier['name'], PATHINFO_EXTENSION));
 
         if (in_array($extension, ['txt', 'csv'])) {
-            $chemin_destination = $dossier_uploads . basename($fichier['name']);
-            if (move_uploaded_file($fichier['tmp_name'], $chemin_destination)) {
-                $message = "Le fichier a été téléchargé avec succès.";
+            $nom_complet = basename($fichier['name']);
+            $chemin_destination = $dossier_uploads . $nom_complet;
+            
+            if (file_exists($chemin_destination)) {
+                $message = "Erreur : Le fichier '$nom_complet' existe déjà.";
             } else {
-                $message = "Erreur lors de l'upload du fichier.";
+                if (move_uploaded_file($fichier['tmp_name'], $chemin_destination)) {
+                    $message = "Le fichier a été téléchargé avec succès.";
+                } else {
+                    $message = "Erreur lors de l'upload du fichier.";
+                }
             }
         } else {
             $message = "Seuls les fichiers .txt et .csv sont autorisés.";
@@ -37,19 +43,60 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nom_fichier = $_POST['nom_fichier'] ?? '';
         $extension = $_POST['extension'] ?? 'txt';
         $contenu = $_POST['contenu'] ?? '';
+        $original_nom = $_POST['original_nom'] ?? '';
 
         if (!empty($nom_fichier) && in_array($extension, ['txt', 'csv'])) {
             $nom_fichier_base = pathinfo($nom_fichier, PATHINFO_FILENAME);
             $nom_complet = basename($nom_fichier_base) . '.' . $extension;
             $chemin = $dossier_uploads . $nom_complet;
 
-            if (file_put_contents($chemin, $contenu) !== false) {
-                $message = "Le fichier a été enregistré avec succès.";
+            if (file_exists($chemin) && $nom_complet !== $original_nom) {
+                $message = "Erreur : Un fichier nommé '$nom_complet' existe déjà. Veuillez choisir un autre nom.";
             } else {
-                $message = "Erreur lors de l'enregistrement du fichier.";
+                if (file_put_contents($chemin, $contenu) !== false) {
+                    $message = "Le fichier a été enregistré avec succès.";
+                    // Supprimer l'ancien fichier si le nom a été modifié pendant l'édition
+                    if (!empty($original_nom) && $nom_complet !== $original_nom) {
+                        $ancien_chemin = $dossier_uploads . basename($original_nom);
+                        if (file_exists($ancien_chemin)) {
+                            unlink($ancien_chemin);
+                        }
+                    }
+                } else {
+                    $message = "Erreur lors de l'enregistrement du fichier.";
+                }
             }
         } else {
             $message = "Nom de fichier invalide ou extension non autorisée.";
+        }
+    } elseif ($action === 'supprimer') {
+        $nom_fichier = $_POST['nom_fichier'] ?? '';
+        $chemin = $dossier_uploads . basename($nom_fichier);
+        if (file_exists($chemin) && !is_dir($chemin)) {
+            unlink($chemin);
+            $message = "Le fichier a été supprimé.";
+        } else {
+            $message = "Erreur : Fichier introuvable.";
+        }
+    } elseif ($action === 'renommer') {
+        $ancien_nom = $_POST['ancien_nom'] ?? '';
+        $nouveau_nom = $_POST['nouveau_nom'] ?? '';
+        
+        $extension_nouveau = strtolower(pathinfo($nouveau_nom, PATHINFO_EXTENSION));
+        if (!in_array($extension_nouveau, ['txt', 'csv'])) {
+            $message = "Erreur : Seuls les fichiers .txt et .csv sont autorisés.";
+        } else {
+            $ancien_chemin = $dossier_uploads . basename($ancien_nom);
+            $nouveau_chemin = $dossier_uploads . basename($nouveau_nom);
+            
+            if (file_exists($ancien_chemin) && !file_exists($nouveau_chemin)) {
+                rename($ancien_chemin, $nouveau_chemin);
+                $message = "Le fichier a été renommé.";
+            } elseif (file_exists($nouveau_chemin)) {
+                $message = "Erreur : Un fichier nommé '$nouveau_nom' existe déjà.";
+            } else {
+                $message = "Erreur : Fichier source introuvable.";
+            }
         }
     }
 }
@@ -136,9 +183,9 @@ foreach (scandir($dossier_uploads) as $f) {
                                             <a href="?edit=<?= urlencode($f) ?>" class="btn btn-sm btn-outline-primary"
                                                 title="Éditer">Éditer</a>
                                             <?php if (in_array($role, ['admin', 'managers', 'direction'])): ?>
-                                                <button class="btn btn-sm btn-outline-secondary" title="Renommer"><i
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Renommer" onclick="renommerFichier('<?= htmlspecialchars($f) ?>')"><i
                                                         class="bi bi-pencil-square"></i></button>
-                                                <button class="btn btn-sm btn-outline-danger" title="Supprimer"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger" title="Supprimer" onclick="supprimerFichier('<?= htmlspecialchars($f) ?>')"><i
                                                         class="bi bi-trash"></i></button>
                                             <?php endif; ?>
                                         </div>
@@ -162,6 +209,7 @@ foreach (scandir($dossier_uploads) as $f) {
                     <div class="card-body">
                         <form action="partage.php" method="POST">
                             <input type="hidden" name="action" value="sauvegarder">
+                            <input type="hidden" name="original_nom" value="<?= htmlspecialchars($edit_nom ? $edit_nom . '.' . $edit_ext : '') ?>">
 
                             <div class="row">
                                 <div class="col-md-8 mb-3">
@@ -195,6 +243,46 @@ foreach (scandir($dossier_uploads) as $f) {
     </div>
 
     <?php pieddepage(); ?>
+    
+    <script>
+    function renommerFichier(ancienNom) {
+        let nouveauNom = prompt("Nouveau nom pour " + ancienNom + " (inclure l'extension .txt ou .csv) :", ancienNom);
+        if (nouveauNom && nouveauNom !== ancienNom) {
+            let form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'partage.php';
+            
+            form.appendChild(createHiddenInput('action', 'renommer'));
+            form.appendChild(createHiddenInput('ancien_nom', ancienNom));
+            form.appendChild(createHiddenInput('nouveau_nom', nouveauNom));
+            
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+
+    function supprimerFichier(nom) {
+        if (confirm("Voulez-vous vraiment supprimer le fichier " + nom + " ?")) {
+            let form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'partage.php';
+            
+            form.appendChild(createHiddenInput('action', 'supprimer'));
+            form.appendChild(createHiddenInput('nom_fichier', nom));
+            
+            document.body.appendChild(form);
+            form.submit();
+        }
+    }
+
+    function createHiddenInput(name, value) {
+        let input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        return input;
+    }
+    </script>
 </body>
 
 </html>
