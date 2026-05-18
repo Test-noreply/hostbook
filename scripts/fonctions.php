@@ -16,14 +16,6 @@ function parametres($titre)
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Fichier CSS personnalisé (surcharges de couleurs uniquement) -->
         <link href="styles.css" rel="stylesheet">
-        <script>
-            // Ajout automatique du thème sombre de Bootstrap sur la balise html
-            document.documentElement.setAttribute("data-bs-theme", "dark");
-            // Ajout des classes personnalisées sur le body
-            document.addEventListener("DOMContentLoaded", function() {
-                document.body.classList.add("hostbook-bg-main", "hostbook-text-light");
-            });
-        </script>
     </head>
     ');
 }
@@ -31,7 +23,7 @@ function parametres($titre)
 function entete()
 {
     // Ouvre le conteneur principal du nouveau design Hostbook
-    echo ('<div class="min-vh-100 d-flex flex-column hostbook-bg-body">');
+    echo ('<div class="min-vh-100 d-flex flex-column bg-light">');
 }
 
 function navigation()
@@ -40,7 +32,7 @@ function navigation()
     $page_active = basename($_SERVER['PHP_SELF']);
     
     echo ('<!-- BARRE DE NAVIGATION -->
-    <nav class="navbar navbar-expand-lg border-bottom hostbook-navbar p-3 shadow-sm">
+    <nav class="navbar navbar-expand-lg border-bottom bg-white p-3 shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand hostbook-accent fw-bold fs-3" href="accueil_intranet.php">Hostbook</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHostbook"
@@ -51,31 +43,31 @@ function navigation()
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">');
     
     if (isset($_SESSION['pseudo'])) {
-        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'accueil_intranet.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="accueil_intranet.php">Tableau de bord</a></li>';
-        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'partage.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="partage.php">Fichiers Partagés</a></li>';
-        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_employe.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="annuaire_employe.php">Annuaire Entreprise</a></li>';
-        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_client.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="annuaire_client.php">Annuaire Clients</a></li>';
-        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_fournisseurs.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="annuaire_fournisseurs.php">Partenaires</a></li>';
+        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'accueil_intranet.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="accueil_intranet.php">Tableau de bord</a></li>';
+        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'partage.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="partage.php">Fichiers Partagés</a></li>';
+        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_employe.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="annuaire_employe.php">Annuaire Entreprise</a></li>';
+        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_client.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="annuaire_client.php">Annuaire Clients</a></li>';
+        echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_fournisseurs.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="annuaire_fournisseurs.php">Partenaires</a></li>';
         
         // Seuls certains groupes ont accès à la gestion des utilisateurs (ex: admin, direction)
         $role = $_SESSION['role'] ?? '';
         if (in_array($role, ['admin', 'direction'])) {
-            echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'gestion_utilisateurs.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="gestion_utilisateurs.php">Utilisateurs</a></li>';
+            echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'gestion_utilisateurs.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="gestion_utilisateurs.php">Utilisateurs</a></li>';
         }
     }
     
-    echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'wiki.php' ? 'active hostbook-accent fw-bold' : 'hostbook-text-light fw-semibold') . ' px-3" href="wiki.php">Wiki</a></li>';
+    echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'wiki.php' ? 'active hostbook-accent fw-bold' : 'text-dark fw-semibold') . ' px-3" href="wiki.php">Wiki</a></li>';
     
     echo ('</ul>
                 <div class="d-flex align-items-center">');
     
     if (isset($_SESSION['pseudo'])) {
         $groupe = $_SESSION['role'] ?? 'user';
-        echo '<span class="me-3 hostbook-text-muted small">Connecté en tant que ' . htmlspecialchars($_SESSION['pseudo']) . ' (' . htmlspecialchars($groupe) . ')</span>';
+        echo '<span class="me-3 text-secondary small">Connecté en tant que ' . htmlspecialchars($_SESSION['pseudo']) . ' (' . htmlspecialchars($groupe) . ')</span>';
         echo '<a href="deconnexion.php" class="btn btn-outline-danger btn-sm px-4 py-2 fw-bold">Déconnexion</a>';
     } else {
-        echo '<span class="me-3 hostbook-text-muted small">Non connecté</span>';
-        echo '<a href="connexion.php" class="btn btn-outline-light btn-sm px-4 py-2 fw-bold">S\'identifier</a>';
+        echo '<span class="me-3 text-secondary small">Non connecté</span>';
+        echo '<a href="connexion.php" class="btn btn-outline-primary btn-sm px-4 py-2 fw-bold">S\'identifier</a>';
     }
     
     echo ('     </div>
@@ -91,8 +83,8 @@ function pieddepage()
     $annee = date('Y');
     echo ('
     </main>
-    <footer class="p-4 hostbook-navbar text-center border-top border-secondary mt-5">
-        <div class="container hostbook-text-muted">
+    <footer class="p-4 bg-white text-center border-top mt-5">
+        <div class="container text-secondary">
             <p>SAÉ 203 - Développement d\'un portail web</p>
             <p>&copy; ' . $annee . ' - Intranet Hostbook</p>
         </div>
