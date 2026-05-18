@@ -21,11 +21,11 @@ if (!isset($_SESSION['pseudo'])) {
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="mb-4">Bienvenue sur l'Intranet</h1>
+                <h1 class="mb-4"> sur l'Intranet</h1>
                 <p class="lead">Ceci est la page d'accueil de l'intranet de l'entreprise.</p>
                 <hr class="my-4">
                 <p>Utilisez le menu de navigation pour accéder aux différents annuaires et outils de gestion.</p>
-                
+
                 <div class="row mt-5">
                     <div class="col-md-4 mb-3">
                         <div class="card shadow-sm h-100">
@@ -61,4 +61,5 @@ if (!isset($_SESSION['pseudo'])) {
 
     <?php pieddepage(); ?>
 </body>
+
 </html>
