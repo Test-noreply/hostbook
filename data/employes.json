@@ -80,19 +80,19 @@
         "bio": "Passionné par les bases de données optimisées et le code propre."
     },
     {
-        "id": 12,
-        "nom": "Simon",
-        "prenom": "Clara",
-        "fonction": "Chef de Projet",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/12.jpg",
-        "bio": "Fait le lien entre les équipes techniques et les clients pour assurer la livraison."
-    },
-    {
         "id": 13,
         "nom": "Jean",
         "prenom": "Lego1",
         "fonction": "Technicien",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/lego\/1.jpg",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/lego\/2.jpg",
         "bio": "Fan de briques"
+    },
+    {
+        "id": 14,
+        "nom": "ezrze",
+        "prenom": "qderezr",
+        "fonction": "zerze",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/lego\/8.jpg",
+        "bio": "zerze"
     }
 ]
