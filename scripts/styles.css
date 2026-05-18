@@ -1,0 +1,108 @@
+/*
+ * ==========================================================================
+ * Fichier CSS Hostbook - Surcharges de couleurs uniquement
+ * ==========================================================================
+ * Conformément aux contraintes techniques strictes :
+ * Ce fichier ne contient QUE des surcharges de couleurs (background, color, border).
+ * Aucune propriété de taille, marge, flexbox ou positionnement n'est présente.
+ * Le design respecte un thème "Dark Mode" avec un accent bleu électrique (#0d6efd).
+ */
+
+/* Fond global de la page (Très sombre) */
+.hostbook-bg-main {
+    background-color: #16161e !important;
+}
+
+/* Fond de la zone de contenu principale (Légèrement plus clair) */
+.hostbook-bg-body {
+    background-color: #1a1b26 !important;
+}
+
+/* Cartes, panneaux et éléments de surface */
+.hostbook-card {
+    background-color: #24283b !important;
+    border-color: #292e42 !important;
+}
+
+/* Barre de navigation */
+.hostbook-navbar {
+    background-color: #16161e !important;
+    border-color: #292e42 !important;
+}
+
+/* Typographie - Textes clairs principaux */
+.hostbook-text-light {
+    color: #e2e8f0 !important;
+}
+
+/* Typographie - Textes secondaires / descriptifs */
+.hostbook-text-muted {
+    color: #a9b1d6 !important;
+}
+
+/* Couleur d'accentuation (Bleu électrique Hostbook) */
+.hostbook-accent {
+    color: #0d6efd !important;
+}
+
+/* Badges avec couleur d'accentuation */
+.hostbook-bg-accent {
+    background-color: #0d6efd !important;
+    color: #ffffff !important;
+}
+
+/* Surcharge des boutons principaux */
+.btn.hostbook-btn {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: #ffffff !important;
+}
+
+.btn.hostbook-btn:hover {
+    background-color: #0b5ed7 !important;
+    border-color: #0a58ca !important;
+    color: #ffffff !important;
+}
+
+/* Surcharge des champs de formulaires (Inputs) */
+.form-control.hostbook-input, 
+.input-group-text.hostbook-bg-body {
+    background-color: #24283b !important;
+    border-color: #292e42 !important;
+    color: #e2e8f0 !important;
+}
+
+.form-control.hostbook-input:focus {
+    background-color: #1a1b26 !important;
+    border-color: #0d6efd !important;
+    color: #ffffff !important;
+}
+
+.form-control.hostbook-input::placeholder {
+    color: #565f89 !important;
+}
+
+/* Surcharge du tableau sombre Bootstrap (Table Dark) */
+.table-dark {
+    background-color: #24283b !important;
+    color: #e2e8f0 !important;
+}
+
+.table-dark th,
+.table-dark td {
+    border-color: #292e42 !important;
+    background-color: transparent !important;
+    color: #e2e8f0 !important;
+}
+
+/* Surcharge des lignes zébrées du tableau */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #1a1b26 !important;
+    color: #e2e8f0 !important;
+}
+
+/* Surcharge de l'effet de survol (Hover) dans les tableaux */
+.table-hover > tbody > tr:hover > * {
+    background-color: #292e42 !important;
+    color: #ffffff !important;
+}
