@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
-            
+
             if ($exists) {
                 $message = "Erreur : Ce nom d'utilisateur est déjà utilisé par un autre compte.";
             } else {
@@ -101,11 +101,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container mt-5 mb-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>Gestion des Utilisateurs</h1>
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addUserModal" onclick="prepareModal('ajouter')">Ajouter un utilisateur</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addUserModal"
+                onclick="prepareModal('ajouter')">Ajouter un utilisateur</button>
         </div>
 
         <?php if ($message): ?>
-            <div class="alert <?= strpos($message, 'Erreur') !== false ? 'alert-danger' : 'alert-success' ?>"><?= htmlspecialchars($message) ?></div>
+            <div class="alert <?= strpos($message, 'Erreur') !== false ? 'alert-danger' : 'alert-success' ?>">
+                <?= htmlspecialchars($message) ?></div>
         <?php endif; ?>
 
         <div class="card shadow-sm">
@@ -122,21 +124,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </thead>
                         <tbody>
                             <?php foreach ($utilisateurs as $index => $u): ?>
-                            <tr>
-                                <td><strong><?= htmlspecialchars($u['utilisateur']) ?></strong></td>
-                                <td><?= htmlspecialchars($u['email']) ?></td>
-                                <td><span class="badge bg-primary"><?= htmlspecialchars($u['groupe']) ?></span></td>
-                                <td>
-                                    <button class="btn btn-sm btn-outline-primary" onclick='prepareModal("modifier", <?= json_encode(["utilisateur" => $u["utilisateur"], "email" => $u["email"], "groupe" => $u["groupe"]], JSON_HEX_APOS | JSON_HEX_QUOT) ?>)' data-bs-toggle="modal" data-bs-target="#addUserModal">Modifier</button>
-                                    <?php if ($u['utilisateur'] !== $_SESSION['pseudo']): ?>
-                                        <form action="gestion_utilisateurs.php" method="POST" class="d-inline" onsubmit="return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');">
-                                            <input type="hidden" name="action" value="supprimer">
-                                            <input type="hidden" name="utilisateur_id" value="<?= htmlspecialchars($u['utilisateur']) ?>">
-                                            <button type="submit" class="btn btn-sm btn-outline-danger">Supprimer</button>
-                                        </form>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><strong><?= htmlspecialchars($u['utilisateur']) ?></strong></td>
+                                    <td><?= htmlspecialchars($u['email']) ?></td>
+                                    <td><span class="badge bg-primary"><?= htmlspecialchars($u['groupe']) ?></span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary"
+                                            onclick='prepareModal("modifier", <?= json_encode(["utilisateur" => $u["utilisateur"], "email" => $u["email"], "groupe" => $u["groupe"]], JSON_HEX_APOS | JSON_HEX_QUOT) ?>)'
+                                            data-bs-toggle="modal" data-bs-target="#addUserModal">Modifier</button>
+                                        <?php if ($u['utilisateur'] !== $_SESSION['pseudo']): ?>
+                                            <form action="gestion_utilisateurs.php" method="POST" class="d-inline"
+                                                onsubmit="return confirm('Voulez-vous vraiment supprimer cet utilisateur ?');">
+                                                <input type="hidden" name="action" value="supprimer">
+                                                <input type="hidden" name="utilisateur_id"
+                                                    value="<?= htmlspecialchars($u['utilisateur']) ?>">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Supprimer</button>
+                                            </form>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -192,44 +198,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <script>
-    function prepareModal(action, data = null) {
-        document.getElementById('modalAction').value = action;
-        
-        if (action === 'ajouter') {
-            document.getElementById('modalUserLabel').innerText = 'Ajouter un utilisateur';
-            document.getElementById('modalSubmit').innerText = 'Ajouter';
-            document.getElementById('old_utilisateur').value = '';
-            document.getElementById('utilisateur').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('motdepasse').required = true;
-            document.getElementById('motdepasse').placeholder = '';
-            document.getElementById('motdepasseHelp').innerText = '';
-            document.getElementById('groupe').value = 'salarie';
-        } else if (action === 'modifier' && data) {
-            document.getElementById('modalUserLabel').innerText = 'Modifier l\'utilisateur';
-            document.getElementById('modalSubmit').innerText = 'Enregistrer';
-            document.getElementById('old_utilisateur').value = data.utilisateur;
-            document.getElementById('utilisateur').value = data.utilisateur;
-            document.getElementById('email').value = data.email;
-            document.getElementById('motdepasse').required = false;
-            document.getElementById('motdepasse').placeholder = '********';
-            document.getElementById('motdepasseHelp').innerText = '(Laisser vide pour conserver le mot de passe actuel)';
-            
-            // Assigner le groupe s'il existe dans les options
-            let groupeSelect = document.getElementById('groupe');
-            let optionExists = Array.from(groupeSelect.options).some(opt => opt.value === data.groupe);
-            if (optionExists) {
-                groupeSelect.value = data.groupe;
-            } else {
-                // S'il a un groupe personnalisé, l'ajouter temporairement pour l'afficher correctement
-                let newOption = new Option(data.groupe, data.groupe);
-                groupeSelect.add(newOption);
-                groupeSelect.value = data.groupe;
+        function prepareModal(action, data = null) {
+            document.getElementById('modalAction').value = action;
+
+            if (action === 'ajouter') {
+                document.getElementById('modalUserLabel').innerText = 'Ajouter un utilisateur';
+                document.getElementById('modalSubmit').innerText = 'Ajouter';
+                document.getElementById('old_utilisateur').value = '';
+                document.getElementById('utilisateur').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('motdepasse').required = true;
+                document.getElementById('motdepasse').placeholder = '';
+                document.getElementById('motdepasseHelp').innerText = '';
+                document.getElementById('groupe').value = 'salarie';
+            } else if (action === 'modifier' && data) {
+                document.getElementById('modalUserLabel').innerText = 'Modifier l\'utilisateur';
+                document.getElementById('modalSubmit').innerText = 'Enregistrer';
+                document.getElementById('old_utilisateur').value = data.utilisateur;
+                document.getElementById('utilisateur').value = data.utilisateur;
+                document.getElementById('email').value = data.email;
+                document.getElementById('motdepasse').required = false;
+                document.getElementById('motdepasse').placeholder = '********';
+                document.getElementById('motdepasseHelp').innerText = '(Laisser vide pour conserver le mot de passe actuel)';
+
+                // Assigner le groupe s'il existe dans les options
+                let groupeSelect = document.getElementById('groupe');
+                let optionExists = Array.from(groupeSelect.options).some(opt => opt.value === data.groupe);
+                if (optionExists) {
+                    groupeSelect.value = data.groupe;
+                } else {
+                    // S'il a un groupe personnalisé, l'ajouter temporairement pour l'afficher correctement
+                    let newOption = new Option(data.groupe, data.groupe);
+                    groupeSelect.add(newOption);
+                    groupeSelect.value = data.groupe;
+                }
             }
         }
-    }
     </script>
 
     <?php pieddepage(); ?>
 </body>
+
 </html>
