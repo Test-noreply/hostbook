@@ -18,9 +18,9 @@ Vous réduisez considérablement le prix d'achat de votre matériel. Vous ne pay
 Equipes :
 - Chef de projet : Théodore
 - Serveur : Arthur
-- Git : Théodore
+- Git : Theodore
 - Intranet : Edward
 - Vitrine : Julien
 - Données : Clément
-- Communication : Théodore
-- Webdesigner : Raphaël 
+- Communication : Theodore
+- Webdesigner : Raphael 
