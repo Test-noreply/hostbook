@@ -2,31 +2,31 @@
     {
         "id": 1,
         "nom": "TechCorp",
-        "logo": "https:\/\/via.placeholder.com\/150\/0000FF\/808080?text=TechCorp",
+        "logo": "https://logo.clearbit.com/techcorp.com",
         "description": "Fournisseur de matériel informatique haute performance."
     },
     {
         "id": 2,
         "nom": "CloudSolutions",
-        "logo": "https:\/\/via.placeholder.com\/150\/FF0000\/FFFFFF?text=CloudSol",
+        "logo": "https:\/logo.clearbit.com\/google.com",
         "description": "Partenaire pour l'hébergement cloud et les serveurs dédiés."
     },
     {
         "id": 3,
         "nom": "OfficeSupplies",
-        "logo": "https:\/\/via.placeholder.com\/150\/00FF00\/000000?text=Office",
+        "logo": "https://logo.clearbit.com/officedepot.com",
         "description": "Fournitures de bureau et mobilier ergonomique pour les employés."
     },
     {
         "id": 5,
         "nom": "DataAnalytics",
-        "logo": "https:\/\/via.placeholder.com\/150\/FF00FF\/FFFFFF?text=Data",
+        "logo": "https://logo.clearbit.com/snowflake.com",
         "description": "Outils d'analyse de données et solutions d'intelligence artificielle."
     },
     {
         "id": 6,
         "nom": "Ciao Kombucha",
-        "logo": "https:\/\/via.placeholder.com\/150\/3880d2\/FFFFFF?text=Logo",
+        "logo": "https://yt3.googleusercontent.com/w9U-q4u4C3SiaY301Wd_i_3E1v2pS4pW4892W1Z9_W2S7D2tM-SHeW38yXpXlW_JgWbU7pSg=s900-c-k-c0x00ffffff-no-rj",
         "description": "Squeezie prime"
     }
 ]

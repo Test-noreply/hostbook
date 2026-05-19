@@ -27,18 +27,54 @@
         "utilisateur": "jcerisier",
         "motdepasse": "$2y$10$IODuA1SRysE6qo0aGjwKtuc\/Dk2nMVsMv8vq7TeOX0k6D982jflfK",
         "email": "julien.cerisier@etudiant.univ-rennes.fr",
-        "groupe": "salarie"
+        "groupe": "managers"
     },
     {
         "utilisateur": "tarbert",
         "motdepasse": "$2y$10$lCkWA4TcV2X\/E018FHFCO.vI6r\/TgIK\/\/dKn5H9.6KmY3rjuGoiuy",
         "email": "theodore.arbert@etudiant.univ-rennes.fr",
-        "groupe": "salarie"
+        "groupe": "direction"
     },
     {
         "utilisateur": "rdrouye",
         "motdepasse": "$2y$10$OxAOxKEUhiaV9\/hGXhHrUu3l0bxd3\/o4rG.F8PyUggWst2p\/sluJW",
         "email": "raphael.drouye@etudiant.univ-rennes.fr",
+        "groupe": "managers"
+    },
+    {
+        "utilisateur": "mgarnier",
+        "motdepasse": "$2y$10$VOtbzUkLSYhw3mUv5vQKE.r7A6530.ZR5.26cp9fb6gcvV\/RtIgC2",
+        "email": "mathieu.garnier@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "sbouchard",
+        "motdepasse": "$2y$10$0Wp7YSIDfEKlpccLNJXPtOFhwLy4nnj7A6n2ImGYoBi8k8xf3Qd7y",
+        "email": "sarah.bouchard@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "ariviere",
+        "motdepasse": "$2y$10$.1S3MbwRqUDn7NSRYADMleTflnvje6bRCBcg5xj0f0AKhuxY3Bf9y",
+        "email": "antoine.riviere@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "ichevalier",
+        "motdepasse": "$2y$10$qWcRHrhxHWSPPQX2czIrPuV6M9Ws35nVS9e.wlOt.yYBlYgtNULsi",
+        "email": "ines.chevalier@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "lfontaine",
+        "motdepasse": "$2y$10$P8GnVkvfkN5pw8N\/lvAcqetzFSwl87EuX1QmajdME2v\/P42lvTP9a",
+        "email": "lucas.fontaine@hostbook.fr",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "nelamrani",
+        "motdepasse": "$2y$10$K5sSa37H0u7eRUMoshiA4OWuHoApGRNiZRNYalrteC2jSzDwx7\/0q",
+        "email": "nadia.elamrani@hostbook.com",
         "groupe": "salarie"
     }
 ]
