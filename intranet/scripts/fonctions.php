@@ -51,9 +51,9 @@ function navigation()
         echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_client.php' ? 'active hostbook-accent fw-bold' : 'text-light fw-semibold') . ' px-3" href="annuaire_client.php">Annuaire Clients</a></li>';
         echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'annuaire_fournisseurs.php' ? 'active hostbook-accent fw-bold' : 'text-light fw-semibold') . ' px-3" href="annuaire_fournisseurs.php">Partenaires</a></li>';
 
-        // Seuls certains groupes ont accès à la gestion des utilisateurs (ex: admin, direction)
+        // Seuls certains groupes ont accès à la gestion des utilisateurs (ex: admin, moderateur)
         $role = $_SESSION['role'] ?? '';
-        if (in_array($role, ['admin', 'direction'])) {
+        if (in_array($role, ['admin', 'moderateur'])) {
             echo '<li class="nav-item"><a class="nav-link ' . ($page_active == 'gestion_utilisateurs.php' ? 'active hostbook-accent fw-bold' : 'text-light fw-semibold') . ' px-3" href="gestion_utilisateurs.php">Utilisateurs</a></li>';
         }
     }
@@ -69,7 +69,7 @@ function navigation()
         echo '<a href="deconnexion.php" class="btn btn-danger btn-sm px-4 py-2 fw-bold">Déconnexion</a>';
     } else {
         echo '<span class="me-3 text-light small">Non connecté</span>';
-        echo '<a href="connexion.php" class="btn btn-primary btn-sm px-4 py-2 fw-bold">S\'identifier</a>';
+        echo '<a href="connexion.php" class="btn btn-success btn-sm px-4 py-2 fw-bold">S\'identifier</a>';
     }
 
     echo ('     </div>

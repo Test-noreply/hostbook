@@ -1,98 +1,98 @@
 [
     {
         "id": 1,
-        "nom": "Dupont",
-        "prenom": "Jean",
-        "fonction": "Directeur Général",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/1.jpg",
-        "bio": "Jean a fondé l'entreprise il y a 10 ans."
+        "nom": "Arbert",
+        "prenom": "Théodore",
+        "fonction": "Co-fondateur & Directeur Général",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/10.jpg",
+        "bio": "Co-fondateur historique d'Hostbook en 2019 lors de ses études en BUT R&T à Lyon. Théodore porte la vision produit et pilote la stratégie de croissance globale de l'entreprise depuis sa création."
     },
     {
         "id": 2,
-        "nom": "Martin",
-        "prenom": "Sophie",
-        "fonction": "Directrice des Ressources Humaines",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/2.jpg",
-        "bio": "Experte en relations humaines et gestion du personnel."
+        "nom": "Courjaud",
+        "prenom": "Edward",
+        "fonction": "Co-fondateur & Directeur Architecture Réseau & Sécurité",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/11.jpg",
+        "bio": "Passionné par les infrastructures complexes, Edward a conçu l'architecture réseau globale d'Hostbook. Il veille à la résilience des connexions et à la sécurité des flux de streaming des PC virtuels."
     },
     {
         "id": 3,
-        "nom": "Bernard",
-        "prenom": "Luc",
-        "fonction": "Directeur Technique",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/3.jpg",
-        "bio": "Luc gère l'ensemble des infrastructures IT et encadre l'équipe technique."
+        "nom": "Gaboriau",
+        "prenom": "Arthur",
+        "fonction": "Co-fondateur & Directeur Virtualisation & Infrastructure",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/12.jpg",
+        "bio": "Expert en environnement serveur, Arthur est l'architecte des premiers prototypes basés sur KVM\/QEMU. Il supervise le déploiement et la maintenance de nos datacenters éco-conçus."
     },
     {
         "id": 4,
-        "nom": "Dubois",
-        "prenom": "Marie",
-        "fonction": "Responsable Marketing",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/4.jpg",
-        "bio": "Créative et toujours à l'affût des dernières tendances pour nos campagnes."
-    },
-    {
-        "id": 5,
-        "nom": "Thomas",
-        "prenom": "Paul",
-        "fonction": "Développeur Senior",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/5.jpg",
-        "bio": "Expert en PHP et architectures distribuées, lead dev sur nos projets majeurs."
+        "nom": "Cerisier",
+        "prenom": "Julien",
+        "fonction": "Co-fondateur & Directeur Expérience Utilisateur",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/13.jpg",
+        "bio": "Diplômé en R&T avec une forte sensibilité design, Julien est le garant de l'expérience utilisateur. Il fluidifie l'accès aux clients légers pour rendre le cloud computing accessible à tous."
     },
     {
         "id": 6,
-        "nom": "Robert",
-        "prenom": "Julie",
-        "fonction": "Designer UX\/UI",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/6.jpg",
-        "bio": "Julie s'assure que nos produits sont intuitifs et accessibles à tous."
+        "nom": "Drouyé",
+        "prenom": "Raphaël",
+        "fonction": "Responsable Commerciale & Relation Client",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/15.jpg",
+        "bio": "Arrivée en 2022 pour propulser l'offre B2B, Raphaël a structuré le service client national 24\/7. Elle gère le déploiement des offres professionnelles auprès des PME et grands comptes."
     },
     {
         "id": 7,
-        "nom": "Richard",
-        "prenom": "David",
-        "fonction": "Administrateur Système",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/7.jpg",
-        "bio": "Garant de la stabilité de nos serveurs et de la sécurité réseau."
+        "nom": "Jaffredo",
+        "prenom": "Clément",
+        "fonction": "Ingénieur DevOps Senior",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/16.jpg",
+        "bio": "Associé de la première heure en 2022, Clément a industrialisé le déploiement des machines virtuelles. Il a conçu les pipelines CI\/CD automatisés assurant la robustesse de notre plateforme."
+    },
+    {
+        "id": 8,
+        "nom": "Garnier",
+        "prenom": "Mathieu",
+        "fonction": "Technicien systèmes & réseaux",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/1.jpg",
+        "bio": "Issu d'un BUT Réseaux et Télécommunications, Mathieu a rejoint l'équipe en 2024. Il assure la supervision quotidienne des infrastructures cloud et le support technique de niveau 1 et 2."
     },
     {
         "id": 9,
-        "nom": "Durand",
-        "prenom": "Nicolas",
-        "fonction": "Commercial",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/9.jpg",
-        "bio": "Nicolas est le premier contact de nos clients et gère le portefeuille grand compte."
+        "nom": "Bouchard",
+        "prenom": "Sarah",
+        "fonction": "Technicienne systèmes & réseaux",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/2.jpg",
+        "bio": "Diplômée en R&T, Sarah renforce l'équipe de supervision en 2024. Spécialiste de la gestion des incidents, elle garantit le maintien en condition opérationnelle des parcs serveurs."
     },
     {
         "id": 10,
-        "nom": "Leroy",
-        "prenom": "Alice",
-        "fonction": "Comptable",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/10.jpg",
-        "bio": "Gère les finances d'une main de maître et veille à l'équilibre budgétaire."
+        "nom": "Rivière",
+        "prenom": "Antoine",
+        "fonction": "Ingénieur cloud & virtualisation",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/3.jpg",
+        "bio": "Diplômé de l'INSA Lyon, Antoine a intégré Hostbook en 2024. Il est chargé d'optimiser les performances des hyperviseurs et de scaler le déploiement massif des nouvelles machines virtuelles."
     },
     {
         "id": 11,
-        "nom": "Moreau",
-        "prenom": "Antoine",
-        "fonction": "Développeur Back-End",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/11.jpg",
-        "bio": "Passionné par les bases de données optimisées et le code propre."
+        "nom": "Chevalier",
+        "prenom": "Inès",
+        "fonction": "Ingénieure cloud & virtualisation",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/4.jpg",
+        "bio": "Titulaire d'un Master en informatique à Strasbourg, Inès apporte son expertise sur la gestion fine des ressources partagées et le déploiement des environnements GPU dédiés."
+    },
+    {
+        "id": 12,
+        "nom": "Fontaine",
+        "prenom": "Lucas",
+        "fonction": "Ingénieur cybersécurité",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/5.jpg",
+        "bio": "Certifié ISO 27001, Lucas a rejoint l'équipe en 2024. Il est le garant du durcissement de la plateforme Hostbook, des audits de sécurité réguliers et de notre stricte conformité RGPD."
     },
     {
         "id": 13,
-        "nom": "Jean",
-        "prenom": "Lego1",
-        "fonction": "Technicien",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/lego\/2.jpg",
-        "bio": "Fan de briques"
-    },
-    {
-        "id": 14,
-        "nom": "ezrze",
-        "prenom": "qderezr",
-        "fonction": "zerze",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/lego\/8.jpg",
-        "bio": "zerze"
+        "nom": "El Amrani",
+        "prenom": "Nadia",
+        "fonction": "Ingénieure DevOps",
+        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/6.jpg",
+        "bio": "Diplômée de l'EPITA, Nadia rejoint l'équipe DevOps en 2024. Elle se concentre sur l'automatisation avancée et le monitoring prédictif pour assurer un taux de disponibilité de 99,9%."
     }
 ]

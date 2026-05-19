@@ -2,8 +2,8 @@
 session_start();
 include 'scripts/fonctions.php';
 
-// Sécurisation : vérifier que l'utilisateur est connecté et fait partie d'un groupe autorisé (ex: admin ou direction)
-if (!isset($_SESSION['pseudo']) || !in_array($_SESSION['role'] ?? '', ['admin', 'direction'])) {
+// Sécurisation : vérifier que l'utilisateur est connecté et fait partie d'un groupe autorisé (ex: admin ou moderateur)
+if (!isset($_SESSION['pseudo']) || !in_array($_SESSION['role'] ?? '', ['admin', 'moderateur'])) {
     header('Location: accueil_intranet.php');
     exit();
 }
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <td><?= htmlspecialchars($u['email']) ?></td>
                                     <td><span class="badge bg-primary"><?= htmlspecialchars($u['groupe']) ?></span></td>
                                     <td>
-                                        <button class="btn btn-sm btn-outline-primary"
+                                        <button class="btn btn-sm btn-outline-success"
                                             onclick='prepareModal("modifier", <?= json_encode(["utilisateur" => $u["utilisateur"], "email" => $u["email"], "groupe" => $u["groupe"]], JSON_HEX_APOS | JSON_HEX_QUOT) ?>)'
                                             data-bs-toggle="modal" data-bs-target="#addUserModal">Modifier</button>
                                         <?php if ($u['utilisateur'] !== $_SESSION['pseudo']): ?>

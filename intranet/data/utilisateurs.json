@@ -1,32 +1,80 @@
 [
     {
         "utilisateur": "admin",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "motdepasse": "$2y$10$mWsEGyMmCWJtNb17iX6SdumSa3M5P91PisqnyTryNBVjpbM99Cpfe",
         "email": "admin@admin.com",
         "groupe": "admin"
     },
     {
-        "utilisateur": "user",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "email": "user@user.com",
-        "groupe": "salarie"
+        "utilisateur": "agaboriau",
+        "motdepasse": "$2y$10$1vHRsDWWEi0GlWzm7kUcqeXOXQDpN2F1kpumJJ9UU4lZMiHwloEau",
+        "email": "arthur.gaboriau@etudiant.univ-rennes.fr",
+        "groupe": "moderateur"
     },
     {
-        "utilisateur": "modo",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "email": "modo@modo.com",
-        "groupe": "managers"
-    },
-    {
-        "utilisateur": "anonymous",
-        "motdepasse": "$2y$10$KjUbubNiOZMWhx4pCTE39.Y3X6aveHLCCqBEohBZ71D.r2YY5mrGy",
-        "email": "",
+        "utilisateur": "cjaffredo",
+        "motdepasse": "$2y$10$ibTdKKq7Njq96BI0oOzD0.ypLh0cG1Dh6R1CN0IVY0zDQKhgehUku",
+        "email": "clement.jaffredo@etudiant.univ-rennes.fr",
         "groupe": "direction"
     },
     {
-        "utilisateur": "aucaijoir",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "email": "aucaijoir@aucaijoir.com",
-        "groupe": "moderateur"
+        "utilisateur": "ecourjaud",
+        "motdepasse": "$2y$10$EAu8eV\/vjxKKK3eb7W9BpONuTSExCIkWTS4tZvxKqpnl74YPgGo5S",
+        "email": "edward.courjaud@etudiant.univ-rennes.fr",
+        "groupe": "managers"
+    },
+    {
+        "utilisateur": "jcerisier",
+        "motdepasse": "$2y$10$IODuA1SRysE6qo0aGjwKtuc\/Dk2nMVsMv8vq7TeOX0k6D982jflfK",
+        "email": "julien.cerisier@etudiant.univ-rennes.fr",
+        "groupe": "managers"
+    },
+    {
+        "utilisateur": "tarbert",
+        "motdepasse": "$2y$10$lCkWA4TcV2X\/E018FHFCO.vI6r\/TgIK\/\/dKn5H9.6KmY3rjuGoiuy",
+        "email": "theodore.arbert@etudiant.univ-rennes.fr",
+        "groupe": "direction"
+    },
+    {
+        "utilisateur": "rdrouye",
+        "motdepasse": "$2y$10$OxAOxKEUhiaV9\/hGXhHrUu3l0bxd3\/o4rG.F8PyUggWst2p\/sluJW",
+        "email": "raphael.drouye@etudiant.univ-rennes.fr",
+        "groupe": "managers"
+    },
+    {
+        "utilisateur": "mgarnier",
+        "motdepasse": "$2y$10$VOtbzUkLSYhw3mUv5vQKE.r7A6530.ZR5.26cp9fb6gcvV\/RtIgC2",
+        "email": "mathieu.garnier@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "sbouchard",
+        "motdepasse": "$2y$10$0Wp7YSIDfEKlpccLNJXPtOFhwLy4nnj7A6n2ImGYoBi8k8xf3Qd7y",
+        "email": "sarah.bouchard@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "ariviere",
+        "motdepasse": "$2y$10$.1S3MbwRqUDn7NSRYADMleTflnvje6bRCBcg5xj0f0AKhuxY3Bf9y",
+        "email": "antoine.riviere@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "ichevalier",
+        "motdepasse": "$2y$10$qWcRHrhxHWSPPQX2czIrPuV6M9Ws35nVS9e.wlOt.yYBlYgtNULsi",
+        "email": "ines.chevalier@hostbook.com",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "lfontaine",
+        "motdepasse": "$2y$10$P8GnVkvfkN5pw8N\/lvAcqetzFSwl87EuX1QmajdME2v\/P42lvTP9a",
+        "email": "lucas.fontaine@hostbook.fr",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "nelamrani",
+        "motdepasse": "$2y$10$K5sSa37H0u7eRUMoshiA4OWuHoApGRNiZRNYalrteC2jSzDwx7\/0q",
+        "email": "nadia.elamrani@hostbook.com",
+        "groupe": "salarie"
     }
 ]

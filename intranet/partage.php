@@ -180,7 +180,7 @@ foreach (scandir($dossier_uploads) as $f) {
                                             <i class="bi bi-file-earmark-text"></i> <?= htmlspecialchars($f) ?>
                                         </a>
                                         <div class="btn-group">
-                                            <a href="?edit=<?= urlencode($f) ?>" class="btn btn-sm btn-outline-primary"
+                                            <a href="?edit=<?= urlencode($f) ?>" class="btn btn-sm btn-outline-success"
                                                 title="Éditer">Éditer</a>
                                             <?php if (in_array($role, ['admin', 'managers', 'direction'])): ?>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Renommer" onclick="renommerFichier('<?= htmlspecialchars($f) ?>')"><i
@@ -232,7 +232,7 @@ foreach (scandir($dossier_uploads) as $f) {
                                     placeholder="Saisissez le contenu de votre fichier ici..."><?= htmlspecialchars($edit_contenu) ?></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">
+                            <button type="submit" class="btn btn-success w-100">
                                 <?= $edit_nom ? 'Enregistrer les modifications' : 'Enregistrer le nouveau fichier' ?>
                             </button>
                         </form>
