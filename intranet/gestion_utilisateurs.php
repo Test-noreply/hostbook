@@ -2,8 +2,8 @@
 session_start();
 include 'scripts/fonctions.php';
 
-// Sécurisation : vérifier que l'utilisateur est connecté et fait partie d'un groupe autorisé (ex: admin ou direction)
-if (!isset($_SESSION['pseudo']) || !in_array($_SESSION['role'] ?? '', ['admin', 'direction'])) {
+// Sécurisation : vérifier que l'utilisateur est connecté et fait partie d'un groupe autorisé (ex: admin ou moderateur)
+if (!isset($_SESSION['pseudo']) || !in_array($_SESSION['role'] ?? '', ['admin', 'moderateur'])) {
     header('Location: accueil_intranet.php');
     exit();
 }

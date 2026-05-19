@@ -184,7 +184,7 @@ include 'scripts/fonctions.php';
                                 <div class="accordion-body">
                                     <strong>Fonctionnalités :</strong>
                                     <ul>
-                                        <li><strong>Sécurisation stricte :</strong> Seuls les utilisateurs avec le rôle <code>admin</code> ou <code>direction</code> peuvent accéder à cette page. Les autres sont redirigés vers l'accueil.</li>
+                                        <li><strong>Sécurisation stricte :</strong> Seuls les utilisateurs avec le rôle <code>admin</code> ou <code>moderateur</code> peuvent accéder à cette page. Les autres sont redirigés vers l'accueil.</li>
                                         <li>Liste tous les utilisateurs depuis <code>data/utilisateurs.json</code>.</li>
                                         <li>Ajout d'un utilisateur (avec hachage automatique du mot de passe via <code>password_hash()</code> et vérification pour empêcher la création de doublons de noms d'utilisateur).</li>
                                         <li>Modification des utilisateurs (permet de changer le rôle/groupe, l'email, ou le nom).
