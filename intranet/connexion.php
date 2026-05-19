@@ -98,10 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         </form>
 
-                        <div class="mt-4 text-center">
-                            <span>Pas encore de compte ? </span>
-                            <a href="inscription.php" class="text-success fw-bold text-decoration-none">S'inscrire</a>
-                        </div>
+
                     </div>
                 </div>
 
