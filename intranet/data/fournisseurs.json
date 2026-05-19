@@ -2,31 +2,31 @@
     {
         "id": 1,
         "nom": "TechCorp",
-        "logo": "https://logo.clearbit.com/techcorp.com",
-        "description": "Fournisseur de matériel informatique haute performance."
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Intel-logo.svg/200px-Intel-logo.svg.png",
+        "description": "Partenaire matériel historique d'Hostbook. TechCorp fournit les composants serveur de pointe (processeurs massivement multicœurs, RAM haute densité) indispensables à la puissance de calcul de nos hyperviseurs KVM/QEMU."
     },
     {
         "id": 2,
         "nom": "CloudSolutions",
-        "logo": "https:\/logo.clearbit.com\/google.com",
-        "description": "Partenaire pour l'hébergement cloud et les serveurs dédiés."
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Google_Cloud_logo.svg/200px-Google_Cloud_logo.svg.png",
+        "description": "Prestataire stratégique pour l'interconnexion réseau et le transit IP. CloudSolutions garantit à Hostbook un routage ultra-rapide, une redondance de bande passante et une latence minimale pour le streaming de nos PC virtuels."
     },
     {
         "id": 3,
         "nom": "OfficeSupplies",
-        "logo": "https://logo.clearbit.com/officedepot.com",
-        "description": "Fournitures de bureau et mobilier ergonomique pour les employés."
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Office_Depot_Logo.svg/200px-Office_Depot_Logo.svg.png",
+        "description": "Fournisseur officiel de l'aménagement des espaces de travail. OfficeSupplies gère le mobilier ergonomique de nos bureaux lyonnais et l'équipement des postes techniques de nos équipes de supervision et de support."
     },
     {
         "id": 5,
         "nom": "DataAnalytics",
-        "logo": "https://logo.clearbit.com/snowflake.com",
-        "description": "Outils d'analyse de données et solutions d'intelligence artificielle."
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/200px-Snowflake_Logo.svg.png",
+        "description": "Éditeur de la solution d'entrepôt de données utilisée par Hostbook. DataAnalytics nous permet de centraliser, de monitorer et d'analyser en temps réel les métriques de performance de nos datacenters pour anticiper les pannes."
     },
     {
         "id": 6,
         "nom": "Ciao Kombucha",
-        "logo": "https://yt3.googleusercontent.com/w9U-q4u4C3SiaY301Wd_i_3E1v2pS4pW4892W1Z9_W2S7D2tM-SHeW38yXpXlW_JgWbU7pSg=s900-c-k-c0x00ffffff-no-rj",
-        "description": "Squeezie prime"
+        "logo": "https://www.bing.com/images/search?view=detailV2&ccid=Kqn3xapm&id=C4B7F4792CF4C3E9B2153ED790D12FB46B2DFE02&thid=OIP.Kqn3xapmRPKhuYOW39F_hAAAAA&mediaurl=https%3a%2f%2fwww.vegetalfood.fr%2f10127-medium_default%2fkombucha-au-fruit-du-dragon-33-cl-ciao-kombucha.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.2aa9f7c5aa6644f2a1b98396dfd17f84%3frik%3dAv4ta7Qv0ZDXPg%26pid%3dImgRaw%26r%3d0&exph=452&expw=452&q=ciao+kombucha&FORM=IRPRST&ck=2B3DC9B1009C6D4CB081AEDFABA58BD8&selectedIndex=7&itb=0&ajaxhist=0&ajaxserp=0",
+        "description": "Fournisseur officiel de boissons biologiques et énergisantes. Ciao Kombucha approvisionne les espaces de détente et les cafétérias de nos datacenters, contribuant au bien-être quotidien de nos ingénieurs et techniciens."
     }
 ]
