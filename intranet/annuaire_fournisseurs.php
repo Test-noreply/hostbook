@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                         
                         <?php if (in_array($role, ['admin', 'direction', 'managers'])): ?>
                             <div class="mt-3">
-                                <button class="btn btn-sm btn-outline-primary" onclick='prepareModal("modifier", <?= json_encode($fournisseur, JSON_HEX_APOS | JSON_HEX_QUOT) ?>)' data-bs-toggle="modal" data-bs-target="#modalFournisseur">Modifier</button>
+                                <button class="btn btn-sm btn-outline-success" onclick='prepareModal("modifier", <?= json_encode($fournisseur, JSON_HEX_APOS | JSON_HEX_QUOT) ?>)' data-bs-toggle="modal" data-bs-target="#modalFournisseur">Modifier</button>
                                 <form action="annuaire_fournisseurs.php" method="POST" class="d-inline" onsubmit="return confirm('Voulez-vous vraiment supprimer ce partenaire ?');">
                                     <input type="hidden" name="action" value="supprimer">
                                     <input type="hidden" name="id" value="<?= $fournisseur['id'] ?>">
@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                        <button type="submit" class="btn btn-primary" id="modalSubmit">Sauvegarder</button>
+                        <button type="submit" class="btn btn-success" id="modalSubmit">Sauvegarder</button>
                     </div>
                 </form>
             </div>

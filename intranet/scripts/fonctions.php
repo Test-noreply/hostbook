@@ -69,7 +69,7 @@ function navigation()
         echo '<a href="deconnexion.php" class="btn btn-danger btn-sm px-4 py-2 fw-bold">Déconnexion</a>';
     } else {
         echo '<span class="me-3 text-light small">Non connecté</span>';
-        echo '<a href="connexion.php" class="btn btn-primary btn-sm px-4 py-2 fw-bold">S\'identifier</a>';
+        echo '<a href="connexion.php" class="btn btn-success btn-sm px-4 py-2 fw-bold">S\'identifier</a>';
     }
 
     echo ('     </div>

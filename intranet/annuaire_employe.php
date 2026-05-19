@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                                     <p class="card-text small"><?= htmlspecialchars($emp['bio']) ?></p>
                                     <?php if (in_array($role, ['admin', 'direction'])): ?>
                                         <div class="mt-2 text-end">
-                                            <button class="btn btn-sm btn-outline-primary"
+                                            <button class="btn btn-sm btn-outline-success"
                                                 onclick='prepareModal("modifier", <?= json_encode($emp, JSON_HEX_APOS | JSON_HEX_QUOT) ?>)'
                                                 data-bs-toggle="modal" data-bs-target="#modalEmploye">Modifier</button>
                                             <form action="annuaire_employe.php" method="POST" class="d-inline"
@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                            <button type="submit" class="btn btn-primary" id="modalSubmit">Sauvegarder</button>
+                            <button type="submit" class="btn btn-success" id="modalSubmit">Sauvegarder</button>
                         </div>
                     </form>
                 </div>

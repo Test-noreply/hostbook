@@ -32,7 +32,7 @@ if (!isset($_SESSION['pseudo'])) {
                             <div class="card-body">
                                 <h5 class="card-title">Employés</h5>
                                 <p class="card-text">Consultez l'annuaire des employés de l'entreprise.</p>
-                                <a href="annuaire_employe.php" class="btn btn-primary">Voir les employés</a>
+                                <a href="annuaire_employe.php" class="btn btn-success">Voir les employés</a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@ if (!isset($_SESSION['pseudo'])) {
                             <div class="card-body">
                                 <h5 class="card-title">Fournisseurs</h5>
                                 <p class="card-text">Gérez les informations des partenaires et fournisseurs.</p>
-                                <a href="annuaire_fournisseurs.php" class="btn btn-primary">Voir les fournisseurs</a>
+                                <a href="annuaire_fournisseurs.php" class="btn btn-success">Voir les fournisseurs</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ if (!isset($_SESSION['pseudo'])) {
                             <div class="card-body">
                                 <h5 class="card-title">Clients</h5>
                                 <p class="card-text">Accédez à la base de données des clients.</p>
-                                <a href="annuaire_client.php" class="btn btn-primary">Voir les clients</a>
+                                <a href="annuaire_client.php" class="btn btn-success">Voir les clients</a>
                             </div>
                         </div>
                     </div>

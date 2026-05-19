@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <td><?= htmlspecialchars($u['email']) ?></td>
                                     <td><span class="badge bg-primary"><?= htmlspecialchars($u['groupe']) ?></span></td>
                                     <td>
-                                        <button class="btn btn-sm btn-outline-primary"
+                                        <button class="btn btn-sm btn-outline-success"
                                             onclick='prepareModal("modifier", <?= json_encode(["utilisateur" => $u["utilisateur"], "email" => $u["email"], "groupe" => $u["groupe"]], JSON_HEX_APOS | JSON_HEX_QUOT) ?>)'
                                             data-bs-toggle="modal" data-bs-target="#addUserModal">Modifier</button>
                                         <?php if ($u['utilisateur'] !== $_SESSION['pseudo']): ?>
