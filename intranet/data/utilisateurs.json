@@ -1,32 +1,44 @@
 [
     {
         "utilisateur": "admin",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
+        "motdepasse": "$2y$10$mWsEGyMmCWJtNb17iX6SdumSa3M5P91PisqnyTryNBVjpbM99Cpfe",
         "email": "admin@admin.com",
         "groupe": "admin"
     },
     {
-        "utilisateur": "user",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "email": "user@user.com",
-        "groupe": "salarie"
+        "utilisateur": "agaboriau",
+        "motdepasse": "$2y$10$1vHRsDWWEi0GlWzm7kUcqeXOXQDpN2F1kpumJJ9UU4lZMiHwloEau",
+        "email": "arthur.gaboriau@etudiant.univ-rennes.fr",
+        "groupe": "moderateur"
     },
     {
-        "utilisateur": "modo",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "email": "modo@modo.com",
-        "groupe": "managers"
-    },
-    {
-        "utilisateur": "anonymous",
-        "motdepasse": "$2y$10$KjUbubNiOZMWhx4pCTE39.Y3X6aveHLCCqBEohBZ71D.r2YY5mrGy",
-        "email": "",
+        "utilisateur": "cjaffredo",
+        "motdepasse": "$2y$10$ibTdKKq7Njq96BI0oOzD0.ypLh0cG1Dh6R1CN0IVY0zDQKhgehUku",
+        "email": "clement.jaffredo@etudiant.univ-rennes.fr",
         "groupe": "direction"
     },
     {
-        "utilisateur": "aucaijoir",
-        "motdepasse": "$2y$10$EztV.T8zsvz4sXMVAOBiKee.ByapuNsNPfp4BsoVtNNuZtRGn7YKa",
-        "email": "aucaijoir@aucaijoir.com",
-        "groupe": "moderateur"
+        "utilisateur": "ecourjaud",
+        "motdepasse": "$2y$10$EAu8eV\/vjxKKK3eb7W9BpONuTSExCIkWTS4tZvxKqpnl74YPgGo5S",
+        "email": "edward.courjaud@etudiant.univ-rennes.fr",
+        "groupe": "managers"
+    },
+    {
+        "utilisateur": "jcerisier",
+        "motdepasse": "$2y$10$IODuA1SRysE6qo0aGjwKtuc\/Dk2nMVsMv8vq7TeOX0k6D982jflfK",
+        "email": "julien.cerisier@etudiant.univ-rennes.fr",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "tarbert",
+        "motdepasse": "$2y$10$lCkWA4TcV2X\/E018FHFCO.vI6r\/TgIK\/\/dKn5H9.6KmY3rjuGoiuy",
+        "email": "theodore.arbert@etudiant.univ-rennes.fr",
+        "groupe": "salarie"
+    },
+    {
+        "utilisateur": "rdrouye",
+        "motdepasse": "$2y$10$OxAOxKEUhiaV9\/hGXhHrUu3l0bxd3\/o4rG.F8PyUggWst2p\/sluJW",
+        "email": "raphael.drouye@etudiant.univ-rennes.fr",
+        "groupe": "salarie"
     }
 ]

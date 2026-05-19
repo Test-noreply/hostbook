@@ -79,7 +79,19 @@ include 'scripts/fonctions.php';
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPages">
                                 <div class="accordion-body">
-                                    Affiche tous les employés de l'entreprise sous forme de cartes avec photo, fonction et biographie. Permet d'ajouter, modifier et supprimer un employé.
+                                    <strong>Fonctionnalités :</strong>
+                                    <ul>
+                                        <li>Redirige vers la page de connexion si l'utilisateur n'est pas authentifié.</li>
+                                        <li>Affiche tous les employés de l'entreprise sous forme de cartes (photo, nom, rôle, biographie) lus depuis <code>data/employes.json</code>.</li>
+                                        <li><strong>Pour les administrateurs et la direction :</strong>
+                                            <ul>
+                                                <li>Possibilité d'ajouter un nouvel employé via une fenêtre modale (avec pré-remplissage d'une URL de photo de profil aléatoire).</li>
+                                                <li>Possibilité de modifier les informations d'un employé existant (pré-remplissage des champs dans la modale).</li>
+                                                <li>Possibilité de supprimer un employé (avec alerte de confirmation JavaScript pour éviter les erreurs).</li>
+                                                <li>Affichage de messages de succès ("L'employé a été ajouté/modifié/supprimé avec succès").</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +104,18 @@ include 'scripts/fonctions.php';
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPages">
                                 <div class="accordion-body">
-                                    Gère les partenaires commerciaux. Les données modifiées ici sont exploitées par le site Vitrine (Wordpress) pour afficher les logos et descriptions.
+                                    <strong>Fonctionnalités :</strong>
+                                    <ul>
+                                        <li>Redirection si non authentifié.</li>
+                                        <li>Affiche les partenaires commerciaux depuis <code>data/fournisseurs.json</code>. Les données modifiées ici sont prévues pour être exploitées par le site Vitrine (Wordpress).</li>
+                                        <li><strong>Pour les rôles admin, direction et managers :</strong>
+                                            <ul>
+                                                <li>Ajout d'un partenaire via une modale (avec génération automatique d'une image "placeholder" aléatoire).</li>
+                                                <li>Modification d'un partenaire existant.</li>
+                                                <li>Suppression d'un partenaire avec confirmation JavaScript.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +128,20 @@ include 'scripts/fonctions.php';
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPages">
                                 <div class="accordion-body">
-                                    Affiche la liste des clients dans un tableau. Permet également la création de fiches clients téléchargeables dynamiquement.
+                                    <strong>Fonctionnalités :</strong>
+                                    <ul>
+                                        <li>Redirection si non authentifié.</li>
+                                        <li>Affiche la liste des clients dans un tableau interactif depuis <code>data/clients.json</code>.</li>
+                                        <li>Barre de recherche en direct (filtre dynamiquement les lignes du tableau en JavaScript selon le texte saisi).</li>
+                                        <li>Génération et téléchargement dynamiques de fiches clients (génère un fichier <code>.txt</code> formaté contenant les détails du client).</li>
+                                        <li><strong>Pour les rôles admin, direction et commercial :</strong>
+                                            <ul>
+                                                <li>Ajout d'un nouveau client via modale.</li>
+                                                <li>Modification des informations du client.</li>
+                                                <li>Suppression d'un client avec demande de confirmation.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +154,22 @@ include 'scripts/fonctions.php';
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionPages">
                                 <div class="accordion-body">
-                                    Espace d'échange de fichiers TXT et CSV. L'affichage et les droits (suppression/modification) dépendent du groupe de l'utilisateur connecté.
+                                    <strong>Fonctionnalités :</strong>
+                                    <ul>
+                                        <li>Redirection si non authentifié.</li>
+                                        <li>Création automatique du dossier <code>uploads/</code> s'il n'existe pas.</li>
+                                        <li>Upload de fichiers (limité aux extensions <code>.txt</code> et <code>.csv</code>).</li>
+                                        <li>Création directe de fichiers texte/csv depuis l'interface avec un éditeur intégré.</li>
+                                        <li>Empêche l'écrasement involontaire : affiche une alerte si un fichier téléchargé ou créé porte un nom déjà existant.</li>
+                                        <li>Lecture des fichiers du dossier <code>uploads/</code>.</li>
+                                        <li>Édition du contenu des fichiers existants directement depuis la page web avec nettoyage automatique de l'ancien fichier si renommé pendant l'édition.</li>
+                                        <li><strong>Pour les rôles admin, direction et managers :</strong>
+                                            <ul>
+                                                <li>Renommage de fichiers (via une boîte de dialogue JavaScript <code>prompt</code>, en vérifiant que la nouvelle extension est autorisée et que le nom n'est pas déjà pris).</li>
+                                                <li>Suppression de fichiers avec boîte de confirmation.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +182,37 @@ include 'scripts/fonctions.php';
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionPages">
                                 <div class="accordion-body">
-                                    Réservé aux administrateurs. Permet de gérer les comptes d'accès à l'intranet (modification des rôles/groupes, réinitialisation de mots de passe, etc.).
+                                    <strong>Fonctionnalités :</strong>
+                                    <ul>
+                                        <li><strong>Sécurisation stricte :</strong> Seuls les utilisateurs avec le rôle <code>admin</code> ou <code>direction</code> peuvent accéder à cette page. Les autres sont redirigés vers l'accueil.</li>
+                                        <li>Liste tous les utilisateurs depuis <code>data/utilisateurs.json</code>.</li>
+                                        <li>Ajout d'un utilisateur (avec hachage automatique du mot de passe via <code>password_hash()</code> et vérification pour empêcher la création de doublons de noms d'utilisateur).</li>
+                                        <li>Modification des utilisateurs (permet de changer le rôle/groupe, l'email, ou le nom).
+                                            <ul>
+                                                <li>Vérifie que le nouveau nom d'utilisateur n'est pas déjà utilisé par un autre compte.</li>
+                                                <li>Permet de changer le mot de passe (le champ peut être laissé vide pour conserver l'ancien).</li>
+                                                <li>Conservation temporaire des groupes personnalisés dans la liste déroulante lors de l'édition.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Suppression d'utilisateurs (avec sécurité empêchant l'utilisateur de supprimer son propre compte connecté).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Accueil de l'Intranet (accueil_intranet.php)
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionPages">
+                                <div class="accordion-body">
+                                    <strong>Fonctionnalités :</strong>
+                                    <ul>
+                                        <li>Redirection vers <code>connexion.php</code> si l'utilisateur n'est pas connecté.</li>
+                                        <li>Page d'atterrissage principale après connexion, présentant des raccourcis vers les annuaires des employés, fournisseurs et clients.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
