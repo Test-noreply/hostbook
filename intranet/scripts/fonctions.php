@@ -11,7 +11,7 @@ function parametres($titre)
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>' . htmlspecialchars($titre) . ' - Hostbook</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/?size=100&id=kfRfIRUL7jMk&format=png&color=000000">
+        <link rel="icon" type="image/jpeg" href="scripts/logomini.png">
         <!-- Bootstrap 5 CSS via CDN -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Fichier CSS personnalisé (surcharges de couleurs uniquement) -->
