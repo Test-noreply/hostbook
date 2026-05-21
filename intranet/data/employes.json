@@ -4,7 +4,7 @@
         "nom": "Arbert",
         "prenom": "Théodore",
         "fonction": "Co-fondateur & Directeur Général",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/10.jpg",
+        "photo": "images/employes/theodore.png",
         "bio": "Co-fondateur historique d'Hostbook en 2019 lors de ses études en BUT R&T à Lyon. Théodore porte la vision produit et pilote la stratégie de croissance globale de l'entreprise depuis sa création."
     },
     {
@@ -12,7 +12,7 @@
         "nom": "Courjaud",
         "prenom": "Edward",
         "fonction": "Co-fondateur & Directeur Architecture Réseau & Sécurité",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/11.jpg",
+        "photo": "images/employes/edward.jpg",
         "bio": "Passionné par les infrastructures complexes, Edward a conçu l'architecture réseau globale d'Hostbook. Il veille à la résilience des connexions et à la sécurité des flux de streaming des PC virtuels."
     },
     {
@@ -20,7 +20,7 @@
         "nom": "Gaboriau",
         "prenom": "Arthur",
         "fonction": "Co-fondateur & Directeur Virtualisation & Infrastructure",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/12.jpg",
+        "photo": "images/employes/arthur.jpg",
         "bio": "Expert en environnement serveur, Arthur est l'architecte des premiers prototypes basés sur KVM\/QEMU. Il supervise le déploiement et la maintenance de nos datacenters éco-conçus."
     },
     {
@@ -28,7 +28,7 @@
         "nom": "Cerisier",
         "prenom": "Julien",
         "fonction": "Co-fondateur & Directeur Expérience Utilisateur",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/13.jpg",
+        "photo": "images/employes/julien.jpg",
         "bio": "Diplômé en R&T avec une forte sensibilité design, Julien est le garant de l'expérience utilisateur. Il fluidifie l'accès aux clients légers pour rendre le cloud computing accessible à tous."
     },
     {
@@ -36,7 +36,7 @@
         "nom": "Drouyé",
         "prenom": "Raphaël",
         "fonction": "Responsable Commerciale & Relation Client",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/women\/15.jpg",
+        "photo": "images/employes/raphael.png",
         "bio": "Arrivée en 2022 pour propulser l'offre B2B, Raphaël a structuré le service client national 24\/7. Elle gère le déploiement des offres professionnelles auprès des PME et grands comptes."
     },
     {
@@ -44,7 +44,7 @@
         "nom": "Jaffredo",
         "prenom": "Clément",
         "fonction": "Ingénieur DevOps Senior",
-        "photo": "https:\/\/randomuser.me\/api\/portraits\/men\/16.jpg",
+        "photo": "images/employes/clement.jpg",
         "bio": "Associé de la première heure en 2022, Clément a industrialisé le déploiement des machines virtuelles. Il a conçu les pipelines CI\/CD automatisés assurant la robustesse de notre plateforme."
     },
     {
