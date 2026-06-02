@@ -20,17 +20,12 @@ function parametres($titre)
     ');
 }
 
-function entete()
-{
-    // Ouvre le conteneur principal du nouveau design Hostbook
-    echo ('<div class="min-vh-100 d-flex flex-column bg-light">');
-}
 
 function navigation()
 {
     // On n\'affiche la navigation complète que si l\'utilisateur est connecté
     $page_active = basename($_SERVER['PHP_SELF']);
-
+    echo ('<div class="min-vh-100 d-flex flex-column bg-light">');
     echo ('<!-- BARRE DE NAVIGATION -->
     <nav class="navbar navbar-expand-lg border-bottom bg-black p-3 shadow-sm" data-bs-theme="dark">
         <div class="container-fluid">
