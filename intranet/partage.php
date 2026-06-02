@@ -130,7 +130,6 @@ foreach (scandir($dossier_uploads) as $f) {
 
 <body>
     <?php
-    entete();
     navigation();
     ?>
 

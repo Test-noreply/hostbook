@@ -63,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
 
 <body>
     <?php
-    entete();
     navigation();
     ?>
 

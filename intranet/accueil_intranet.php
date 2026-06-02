@@ -14,7 +14,6 @@ if (!isset($_SESSION['pseudo'])) {
 
 <body>
     <?php
-    entete();
     navigation();
     ?>
 

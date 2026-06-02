@@ -8,7 +8,6 @@ include 'scripts/fonctions.php';
 
 <body>
     <?php
-    entete();
     navigation();
     ?>
 
