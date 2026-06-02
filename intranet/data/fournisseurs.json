@@ -13,8 +13,8 @@
     },
     {
         "id": 3,
-        "nom": "OfficeSupplies",
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Office_Depot_Logo.svg/200px-Office_Depot_Logo.svg.png",
+        "nom": "OfficeSupply",
+        "logo": "images/partenaires/officesupply.png",
         "description": "Fournisseur officiel de l'aménagement des espaces de travail. OfficeSupplies gère le mobilier ergonomique de nos bureaux lyonnais et l'équipement des postes techniques de nos équipes de supervision et de support."
     },
     {
