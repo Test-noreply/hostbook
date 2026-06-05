@@ -97,6 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         </form>
 
+                        <div class="mt-3 text-center">
+                            <a href="/wordpress" class="btn btn-outline-success w-100">Retour au site Vitrine</a>
+                        </div>
 
                     </div>
                 </div>
