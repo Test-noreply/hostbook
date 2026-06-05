@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
         </div>
     </div>
 
-    <!-- Modal Employé -->
+    <!-- Fenetre Modal Employé -->
     <?php if (in_array($role, ['admin', 'direction'])): ?>
         <div class="modal fade" id="modalEmploye" tabindex="-1" aria-labelledby="modalEmployeLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -169,6 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
         </div>
 
         <script>
+            //Fonction javascript pour préremplir les valeurs dans la fenetre d'ajout/modification
             function prepareModal(action, data = null) {
                 document.getElementById('modalAction').value = action;
 
@@ -179,6 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                     document.getElementById('prenom').value = '';
                     document.getElementById('nom').value = '';
                     document.getElementById('fonction').value = '';
+                    //mettre une photo aléatoire
                     document.getElementById('photo').value = 'https://randomuser.me/api/portraits/lego/' + Math.floor(Math.random() * 9 + 1) + '.jpg';
                     document.getElementById('bio').value = '';
                 } else if (action === 'modifier' && data) {

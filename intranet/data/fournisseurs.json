@@ -2,31 +2,31 @@
     {
         "id": 1,
         "nom": "TechCorp",
-        "logo": "images/partenaires/tech.png",
-        "description": "Partenaire matériel historique d'Hostbook. TechCorp fournit les composants serveur de pointe (processeurs massivement multicœurs, RAM haute densité) indispensables à la puissance de calcul de nos hyperviseurs KVM/QEMU."
+        "logo": "images\/partenaires\/tech.png",
+        "description": "Partenaire matériel historique d'Hostbook. TechCorp fournit les composants serveur de pointe (processeurs massivement multicœurs, RAM haute densité) indispensables à la puissance de calcul de nos hyperviseurs KVM\/QEMU."
     },
     {
         "id": 2,
         "nom": "CloudSolutions",
-        "logo": "images/partenaires/cloud.png",
+        "logo": "images\/partenaires\/cloud.png",
         "description": "Prestataire stratégique pour l'interconnexion réseau et le transit IP. CloudSolutions garantit à Hostbook un routage ultra-rapide, une redondance de bande passante et une latence minimale pour le streaming de nos PC virtuels."
     },
     {
         "id": 3,
         "nom": "OfficeSupply",
-        "logo": "images/partenaires/officesupply.png",
+        "logo": "images\/partenaires\/officesupply.png",
         "description": "Fournisseur officiel de l'aménagement des espaces de travail. OfficeSupplies gère le mobilier ergonomique de nos bureaux lyonnais et l'équipement des postes techniques de nos équipes de supervision et de support."
     },
     {
         "id": 5,
         "nom": "DataAnalytics",
-        "logo": "images/partenaires/data.png",
+        "logo": "images\/partenaires\/data.png",
         "description": "Éditeur de la solution d'entrepôt de données utilisée par Hostbook. DataAnalytics nous permet de centraliser, de monitorer et d'analyser en temps réel les métriques de performance de nos datacenters pour anticiper les pannes."
     },
     {
         "id": 6,
         "nom": "Ciao Kombucha",
-        "logo": "images/partenaires/ciao.png",
+        "logo": "images\/partenaires\/ciao.png",
         "description": "Fournisseur officiel de boissons biologiques et énergisantes. Ciao Kombucha approvisionne les espaces de détente et les cafétérias de nos datacenters, contribuant au bien-être quotidien de nos ingénieurs et techniciens."
     }
 ]
