@@ -11,7 +11,6 @@ $fichier_fournisseurs = 'data/fournisseurs.json';
 if (file_exists($fichier_fournisseurs)) {
     // On récupère directement le contenu du fichier JSON
     $contenu = file_get_contents($fichier_fournisseurs);
-
     // On l'affiche brut pour WordPress
     echo $contenu;
 } else {
