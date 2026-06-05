@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                         </div>
                         <div class="mb-3">
                             <label for="logo" class="form-label">URL du logo</label>
-                            <input type="url" class="form-control" id="logo" name="logo" placeholder="https://..." required>
+                            <input type="url" class="form-control" id="logo" name="logo" placeholder="https://..." >
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
@@ -145,6 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
     </div>
 
     <script>
+        //fonction pour préremplir la fenetre modal
     function prepareModal(action, data = null) {
         document.getElementById('modalAction').value = action;
         
@@ -153,8 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
             document.getElementById('modalSubmit').innerText = 'Ajouter';
             document.getElementById('modalId').value = '';
             document.getElementById('nom').value = '';
-            let randomColor = Math.floor(Math.random()*16777215).toString(16);
-            document.getElementById('logo').value = 'https://via.placeholder.com/150/' + randomColor + '/FFFFFF?text=Logo';
+            document.getElementById('logo').value ='';
             document.getElementById('description').value = '';
         } else if (action === 'modifier' && data) {
             document.getElementById('modalFournisseurLabel').innerText = 'Modifier le partenaire';
