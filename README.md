@@ -27,7 +27,7 @@ Liens :
 - Page infos : http://172.18.203.202/infos.html
 - Wiki : http://172.18.203.202/wiki.html
 - Site Vitrine : http://172.18.203.202/wordpress/
-- Intranet : http://172.18.203.202/hostbook/intranet/
+- Intranet : http://172.18.203.202/hostbook/intranet/connexion.php
 
 Identifiants de test intranet (mot de passe pour tous : bonjour) :
 - Admin : admin
