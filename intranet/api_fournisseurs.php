@@ -2,7 +2,7 @@
 // api_fournisseurs.php
 header('Content-Type: application/json; charset=utf-8');
 
-// Autoriser le site WordPress à interroger cette API (Optionnel mais recommandé)
+// Autoriser le site WordPress à interroger cette API
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 

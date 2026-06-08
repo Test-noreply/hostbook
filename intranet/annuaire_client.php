@@ -20,7 +20,7 @@ $role = $_SESSION['role'] ?? 'user';
 
 // Gestion du téléchargement de fiche
 if (isset($_GET['action']) && $_GET['action'] === 'telecharger_fiche' && isset($_GET['id'])) {
-    $id = (int)$_GET['id'];
+    $id = (int) $_GET['id'];
     $client = null;
     foreach ($clients as $c) {
         if ($c['id'] === $id) {
@@ -28,7 +28,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'telecharger_fiche' && isset($
             break;
         }
     }
-    
+
     if ($client) {
         $contenu_fiche = "FICHE CLIENT\n";
         $contenu_fiche .= "==========================\n";
@@ -38,9 +38,9 @@ if (isset($_GET['action']) && $_GET['action'] === 'telecharger_fiche' && isset($
         $contenu_fiche .= "Téléphone : " . $client['telephone'] . "\n";
         $contenu_fiche .= "Email     : " . $client['email'] . "\n";
         $contenu_fiche .= "Adresse   : " . $client['adresse'] . "\n";
-        
+
         $nom_fichier = "fiche_client_" . $client['id'] . "_" . preg_replace('/[^a-zA-Z0-9]/', '', $client['nom']) . ".txt";
-        
+
         header('Content-Type: text/plain; charset=utf-8');
         header('Content-Disposition: attachment; filename="' . $nom_fichier . '"');
         echo $contenu_fiche;
@@ -53,12 +53,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
     $action = $_POST['action'] ?? '';
 
     if ($action === 'supprimer') {
-        $id = (int)($_POST['id'] ?? 0);
+        $id = (int) ($_POST['id'] ?? 0);
         $clients = array_filter($clients, fn($c) => $c['id'] !== $id);
         file_put_contents($fichier_clients, json_encode(array_values($clients), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         $message = "Le client a été supprimé avec succès.";
     } elseif ($action === 'ajouter' || $action === 'modifier') {
-        $id = (int)($_POST['id'] ?? 0);
+        $id = (int) ($_POST['id'] ?? 0);
         $nom = $_POST['nom'] ?? '';
         $prenom = $_POST['prenom'] ?? '';
         $telephone = $_POST['telephone'] ?? '';
@@ -106,7 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>Base de Données Clients</h1>
             <?php if (in_array($role, ['admin', 'direction', 'commercial'])): ?>
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalClient" onclick="prepareModal('ajouter')">Ajouter un client</button>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalClient"
+                    onclick="prepareModal('ajouter')">Ajouter un client</button>
             <?php endif; ?>
         </div>
 
@@ -118,7 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <input type="text" id="rechercheClient" class="form-control" placeholder="Rechercher un client (nom, email, etc.)...">
+                        <input type="text" id="rechercheClient" class="form-control"
+                            placeholder="Rechercher un client (nom, email, etc.)...">
                     </div>
                 </div>
 
@@ -137,27 +139,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
                         </thead>
                         <tbody>
                             <?php foreach ($clients as $c): ?>
-                            <tr>
-                                <td><?= htmlspecialchars($c['id']) ?></td>
-                                <td><strong><?= htmlspecialchars($c['nom']) ?></strong></td>
-                                <td><?= htmlspecialchars($c['prenom']) ?></td>
-                                <td><?= htmlspecialchars($c['telephone']) ?></td>
-                                <td><a href="mailto:<?= htmlspecialchars($c['email']) ?>"><?= htmlspecialchars($c['email']) ?></a></td>
-                                <td><?= htmlspecialchars($c['adresse']) ?></td>
-                                <td>
-                                    <a href="annuaire_client.php?action=telecharger_fiche&id=<?= $c['id'] ?>" class="btn btn-sm btn-outline-info" title="Télécharger la fiche">
-                                        <i class="bi bi-download"></i> Fiche
-                                    </a>
-                                    <?php if (in_array($role, ['admin', 'direction', 'commercial'])): ?>
-                                        <button class="btn btn-sm btn-outline-success" onclick='prepareModal("modifier", <?= json_encode($c, JSON_HEX_APOS | JSON_HEX_QUOT) ?>)' data-bs-toggle="modal" data-bs-target="#modalClient">Modifier</button>
-                                        <form action="annuaire_client.php" method="POST" class="d-inline" onsubmit="return confirm('Voulez-vous vraiment supprimer ce client ?');">
-                                            <input type="hidden" name="action" value="supprimer">
-                                            <input type="hidden" name="id" value="<?= $c['id'] ?>">
-                                            <button type="submit" class="btn btn-sm btn-outline-danger">Supprimer</button>
-                                        </form>
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><?= htmlspecialchars($c['id']) ?></td>
+                                    <td><strong><?= htmlspecialchars($c['nom']) ?></strong></td>
+                                    <td><?= htmlspecialchars($c['prenom']) ?></td>
+                                    <td><?= htmlspecialchars($c['telephone']) ?></td>
+                                    <td><a
+                                            href="mailto:<?= htmlspecialchars($c['email']) ?>"><?= htmlspecialchars($c['email']) ?></a>
+                                    </td>
+                                    <td><?= htmlspecialchars($c['adresse']) ?></td>
+                                    <td>
+                                        <a href="annuaire_client.php?action=telecharger_fiche&id=<?= $c['id'] ?>"
+                                            class="btn btn-sm btn-outline-info" title="Télécharger la fiche">
+                                            Fiche
+                                        </a>
+                                        <?php if (in_array($role, ['admin', 'direction', 'commercial'])): ?>
+                                            <button class="btn btn-sm btn-outline-success"
+                                                onclick='prepareModal("modifier", <?= json_encode($c, JSON_HEX_APOS | JSON_HEX_QUOT) ?>)'
+                                                data-bs-toggle="modal" data-bs-target="#modalClient">Modifier</button>
+                                            <form action="annuaire_client.php" method="POST" class="d-inline"
+                                                onsubmit="return confirm('Voulez-vous vraiment supprimer ce client ?');">
+                                                <input type="hidden" name="action" value="supprimer">
+                                                <input type="hidden" name="id" value="<?= $c['id'] ?>">
+                                                <button type="submit" class="btn btn-sm btn-outline-danger">Supprimer</button>
+                                            </form>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -168,82 +176,82 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
 
     <!-- Modal Client -->
     <?php if (in_array($role, ['admin', 'direction', 'commercial'])): ?>
-    <div class="modal fade" id="modalClient" tabindex="-1" aria-labelledby="modalClientLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form action="annuaire_client.php" method="POST">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalClientLabel">Ajouter un client</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                    </div>
-                    <div class="modal-body">
-                        <input type="hidden" name="action" id="modalAction" value="ajouter">
-                        <input type="hidden" name="id" id="modalId" value="">
-                        
-                        <div class="mb-3">
-                            <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="nom" name="nom" required>
+        <div class="modal fade" id="modalClient" tabindex="-1" aria-labelledby="modalClientLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="annuaire_client.php" method="POST">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalClientLabel">Ajouter un client</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                         </div>
-                        <div class="mb-3">
-                            <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        <div class="modal-body">
+                            <input type="hidden" name="action" id="modalAction" value="ajouter">
+                            <input type="hidden" name="id" id="modalId" value="">
+
+                            <div class="mb-3">
+                                <label for="nom" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" name="nom" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="prenom" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="prenom" name="prenom" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">Téléphone</label>
+                                <input type="text" class="form-control" id="telephone" name="telephone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <textarea class="form-control" id="adresse" name="adresse" rows="2" required></textarea>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="telephone" class="form-label">Téléphone</label>
-                            <input type="text" class="form-control" id="telephone" name="telephone" required>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-success" id="modalSubmit">Sauvegarder</button>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="adresse" class="form-label">Adresse</label>
-                            <textarea class="form-control" id="adresse" name="adresse" rows="2" required></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                        <button type="submit" class="btn btn-success" id="modalSubmit">Sauvegarder</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-    function prepareModal(action, data = null) {
-        document.getElementById('modalAction').value = action;
-        
-        if (action === 'ajouter') {
-            document.getElementById('modalClientLabel').innerText = 'Ajouter un client';
-            document.getElementById('modalSubmit').innerText = 'Ajouter';
-            document.getElementById('modalId').value = '';
-            document.getElementById('nom').value = '';
-            document.getElementById('prenom').value = '';
-            document.getElementById('telephone').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('adresse').value = '';
-        } else if (action === 'modifier' && data) {
-            document.getElementById('modalClientLabel').innerText = 'Modifier le client';
-            document.getElementById('modalSubmit').innerText = 'Enregistrer';
-            document.getElementById('modalId').value = data.id;
-            document.getElementById('nom').value = data.nom;
-            document.getElementById('prenom').value = data.prenom;
-            document.getElementById('telephone').value = data.telephone;
-            document.getElementById('email').value = data.email;
-            document.getElementById('adresse').value = data.adresse;
-        }
-    }
-    </script>
+        <script>
+            function prepareModal(action, data = null) {
+                document.getElementById('modalAction').value = action;
+
+                if (action === 'ajouter') {
+                    document.getElementById('modalClientLabel').innerText = 'Ajouter un client';
+                    document.getElementById('modalSubmit').innerText = 'Ajouter';
+                    document.getElementById('modalId').value = '';
+                    document.getElementById('nom').value = '';
+                    document.getElementById('prenom').value = '';
+                    document.getElementById('telephone').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('adresse').value = '';
+                } else if (action === 'modifier' && data) {
+                    document.getElementById('modalClientLabel').innerText = 'Modifier le client';
+                    document.getElementById('modalSubmit').innerText = 'Enregistrer';
+                    document.getElementById('modalId').value = data.id;
+                    document.getElementById('nom').value = data.nom;
+                    document.getElementById('prenom').value = data.prenom;
+                    document.getElementById('telephone').value = data.telephone;
+                    document.getElementById('email').value = data.email;
+                    document.getElementById('adresse').value = data.adresse;
+                }
+            }
+        </script>
     <?php endif; ?>
 
     <!-- Script très basique pour la recherche (optionnel) -->
     <script>
-        document.getElementById('rechercheClient').addEventListener('keyup', function() {
+        document.getElementById('rechercheClient').addEventListener('keyup', function () {
             var value = this.value.toLowerCase();
             var rows = document.querySelectorAll('#tableClients tbody tr');
-            
-            rows.forEach(function(row) {
+
+            rows.forEach(function (row) {
                 var text = row.textContent.toLowerCase();
                 row.style.display = text.indexOf(value) > -1 ? '' : 'none';
             });
@@ -252,4 +260,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'directio
 
     <?php pieddepage(); ?>
 </body>
+
 </html>
