@@ -49,7 +49,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'telecharger_fiche' && isset($
 }
 
 // Gestion des actions (Ajouter, Modifier, Supprimer)
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'direction'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && in_array($role, ['admin', 'direction', 'commercial'])) {
     $action = $_POST['action'] ?? '';
 
     if ($action === 'supprimer') {
