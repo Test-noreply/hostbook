@@ -1,4 +1,5 @@
-Bienvenue chez Hostbook !
+# Projet Hostbook SAÉ-203
+
 Notre entreprise reinvente la facon d'utiliser un ordinateur.
 
 Notre concept
@@ -33,7 +34,7 @@ Identifiants de test intranet (mot de passe pour tous : bonjour) :
 - Admin : admin
 - Modérateur : agaboriau
 - Managers : ecourjaud (ou jcerisier)
-- Direction : cjaffredo (ou tarbert)
+- Direction : tarbert (ou cjaffredo)
 
 Programmation et extension :
 - Vitrine : WordPress avec plugin maison (PHP)
