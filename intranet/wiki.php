@@ -37,10 +37,19 @@ include 'scripts/fonctions.php';
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>admin</td><td>admin</td><td>admin</td></tr>
-                            <tr><td>user</td><td>user</td><td>salarie</td></tr>
-                            <tr><td>modo</td><td>modo</td><td>managers</td></tr>
-                            <tr><td>anonymous</td><td>anonymous</td><td>direction</td></tr>
+                            <tr><td>admin</td><td>bonjour</td><td>admin</td></tr>
+                            <tr><td>agaboriau</td><td>bonjour</td><td>moderateur</td></tr>
+                            <tr><td>cjaffredo</td><td>bonjour</td><td>direction</td></tr>
+                            <tr><td>ecourjaud</td><td>bonjour</td><td>managers</td></tr>
+                            <tr><td>jcerisier</td><td>bonjour</td><td>managers</td></tr>
+                            <tr><td>tarbert</td><td>bonjour</td><td>direction</td></tr>
+                            <tr><td>rdrouye</td><td>bonjour</td><td>managers</td></tr>
+                            <tr><td>mgarnier</td><td>bonjour</td><td>salarie</td></tr>
+                            <tr><td>sbouchard</td><td>bonjour</td><td>salarie</td></tr>
+                            <tr><td>ariviere</td><td>bonjour</td><td>salarie</td></tr>
+                            <tr><td>ichevalier</td><td>bonjour</td><td>salarie</td></tr>
+                            <tr><td>lfontaine</td><td>bonjour</td><td>salarie</td></tr>
+                            <tr><td>nelamrani</td><td>bonjour</td><td>salarie</td></tr>
                         </tbody>
                     </table>
                 </section>
