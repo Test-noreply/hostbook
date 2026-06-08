@@ -1,4 +1,4 @@
-# Projet Hostbook SAÉ-203
+# Projet Hostbook SAE-203
 
 Notre entreprise reinvente la facon d'utiliser un ordinateur.
 
@@ -39,4 +39,4 @@ Identifiants de test intranet (mot de passe pour tous : bonjour) :
 Programmation et extension :
 - Vitrine : WordPress avec plugin maison (PHP)
 - Intranet : PHP natif, Bootstrap 5
-- Données : JSON et CSV (pas de MySQL)
+- Donnees : JSON et CSV (pas de MySQL)
